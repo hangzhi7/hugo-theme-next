@@ -22,7 +22,7 @@
 {{ end }}
 
 {{/* Special scheme scripts */}}
-{{ if or (eq .Site.Params.shceme "Muse") (eq .Site.Params.shceme "Mist") }}
+{{ if or (eq .Site.Params.scheme "Muse") (eq .Site.Params.scheme "Mist") }}
 {{ $musejs := resources.Get "js/schemes/muse.js" }}
 {{ $nextjs = $nextjs | append $musejs }}
 {{ end }}
