@@ -73,8 +73,10 @@ PostMeta:
   edit: 編輯
 
 Reward:
-  title: 讚賞
-  wechatpay: 微信
+  title: 關注
+  #title: 讚賞
+  # wechatpay: 微信
+  gzh: 公眾號
   alipay: 支付寶
   paypal: Paypal
   bitcoin: 比特幣
