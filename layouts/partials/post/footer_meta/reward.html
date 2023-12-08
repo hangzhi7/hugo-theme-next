@@ -9,7 +9,7 @@
     {{ range $name,$img := .reward }}
       {{ $payName := T (printf "Reward.%s" $name) }}
       <div class="post-reward-item">
-        <img src="/imgs/img-lazy-loading.gif"  data-src="{{ $img }}" alt="{{ $.Site.Params.author }} - {{ $payName }}">
+        <img src="https://jsd.cdn.zzko.cn/gh/hangzhi7/site_img@master/imgs/img-lazy-loading.gif"  data-src="{{ $img }}" alt="{{ $.Site.Params.author }} - {{ $payName }}">
         <span>{{ $payName }}</span>
       </div>
     {{ end }}
