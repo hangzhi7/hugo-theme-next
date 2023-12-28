@@ -12,15 +12,13 @@ jobs:
         run: |
           git config --global init.defaultBranch main
           git init
-          git remote add origin https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git remote add origin https://github.com/${GITHUB_REPOSITORY}.git
           git fetch --all
           for branch in `git branch -a | grep remotes | grep -v HEAD`; do
             git branch --track ${branch##*/} $branch
           done
         env:
           GITHUB_REPOSITORY: hangzhi7/hugo-theme-next
-          GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           
       - name: Push to Gitee
         run: |
